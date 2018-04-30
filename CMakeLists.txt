@@ -12,7 +12,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_CFLAGS} -pthread ")
 set (RD "${CMAKE_CURRENT_SOURCE_DIR}/ROSS/")
 set (ND "${CMAKE_CURRENT_SOURCE_DIR}/src/")
 set (LuaD "${CMAKE_CURRENT_SOURCE_DIR}/lua")
-set (SQLD "${CMAKE_CURRENT_SOURCE_DIR}/sqlite/")
+#set (SQLD "${CMAKE_CURRENT_SOURCE_DIR}/sqlite/")
 set (simcld "${CMAKE_CURRENT_SOURCE_DIR}/src/lib/simclist")
 
 #cmake_policy(SET CMP0012 OLD)
