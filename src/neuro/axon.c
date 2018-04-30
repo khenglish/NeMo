@@ -53,7 +53,7 @@ void scheduleSpike(long time, id_type axonID, tw_lp *lp) {
 int axonct = 0;
 
 /** Not used in NeMo2 */
-void axonSpikeReader(axonState *s, tw_lp *lp) {
+/*void axonSpikeReader(axonState *s, tw_lp *lp) {
   static char announce = 1;
   //static int axonct = 0;
   if (g_tw_mynode==0) {
@@ -85,7 +85,7 @@ void axonSpikeReader(axonState *s, tw_lp *lp) {
   }
   spikeFromAxonComplete(&spikeList);
 
-}
+}*/
 
 void axon_init(axonState *s, tw_lp *lp) {
   static int fileInit = 0;
