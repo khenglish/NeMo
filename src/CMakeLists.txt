@@ -39,7 +39,7 @@ endif ()
 
 ##NeMo uses a few C11 features, including generic macros. We assume standard C11
 ##behaviors.
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lsqlite3")
+#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lsqlite3")
 if (${NON11})
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu99")
