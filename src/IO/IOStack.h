@@ -78,14 +78,14 @@ int getSpikesFromSynapse(void *timeList, id_type core);
  * @param core The local coreID of the synapse.
  * @return number of spikes
  */
-int getNumSpikesForCore(id_type core);
+//int getNumSpikesForCore(id_type core);
 
-int spikeFromSynapseComplete(void *timeList);
+//int spikeFromSynapseComplete(void *timeList);
 
-int spikeFromAxonComplete(void *timeList);
+//int spikeFromAxonComplete(void *timeList);
 
 int openSpikeFile();
-int closeSpikeFile();
+//int closeSpikeFile();
 
 int loadSpikesFromFile(char *filename);
 
