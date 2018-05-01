@@ -147,9 +147,9 @@ ADD_EXECUTABLE(NeMo ${model_srcs})
 #endif()
 
 if (USE_LUA_JIT)
-    TARGET_LINK_LIBRARIES(NeMo ROSS luajit sqlite3 simclist m)
+    TARGET_LINK_LIBRARIES(NeMo ROSS luajit simclist m)
 
 else ()
-    TARGET_LINK_LIBRARIES(NeMo ROSS liblua sqlite3 simclist m)
+   TARGET_LINK_LIBRARIES(NeMo ROSS liblua simclist m)
 endif ()
  

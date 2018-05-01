@@ -8,6 +8,9 @@
 /** \addtogroup Globals
 #define TESTIO 0
  * @{  */
+double start_time;
+double overall_start_time;
+
 
 size_type CORES_IN_SIM = 16;
 // size_type AXONS_IN_CORE = NEURONS_IN_CORE;
@@ -192,7 +195,7 @@ tw_lptype model_lps[] = {
     },
     {
         (init_f) synapse_init,
-        //(pre_run_f) synapse_pre_run,
+        (pre_run_f) synapse_pre_run,
         (event_f) synapse_event,
         (revent_f) synapse_reverse,
         (commit_f) NULL,
@@ -401,6 +404,7 @@ void init_nemo() {
 
 // INPUT SPIKE FILE init HERE:
     ////////////////////////
+    start_time = MPI_Wtime();
     openSpikeFile();
     //connectToDB(SPIKE_FILE);
     //int spkCT = loadSpikesFromFile(SPIKE_FILE);
@@ -457,6 +461,7 @@ int main(int argc, char *argv[]) {
   tw_opt_add(app_opt);
   spikech(388);
   tw_init(&argc, &argv);
+  overall_start_time = MPI_Wtime();
   //call nemo init
   init_nemo();
   printf("\n Completed initial setup and model loading.\n");

@@ -278,6 +278,10 @@ typedef struct NeuronMembraneRecord {
  * \defgroup Globals Global Variables
  * @{
  */
+EXT double overall_start_time;
+EXT double start_time;
+EXT double end_time;
+
 EXT size_type LPS_PER_PE;
 EXT size_type SIM_SIZE;
 EXT size_type LP_PER_KP;
