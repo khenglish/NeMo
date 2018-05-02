@@ -8,7 +8,8 @@
 /** \addtogroup Globals
 #define TESTIO 0
  * @{  */
-double start_time;
+double file_read_start_time;
+double file_read_end_time;
 double overall_start_time;
 
 
@@ -404,8 +405,9 @@ void init_nemo() {
 
 // INPUT SPIKE FILE init HERE:
     ////////////////////////
-    start_time = MPI_Wtime();
+    file_read_start_time = MPI_Wtime();
     openSpikeFile();
+    file_read_end_time = MPI_Wtime();
     //connectToDB(SPIKE_FILE);
     //int spkCT = loadSpikesFromFile(SPIKE_FILE);
     //printf("Read %i spikes\n", spkCT);
